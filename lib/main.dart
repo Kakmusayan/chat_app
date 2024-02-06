@@ -23,7 +23,11 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Chat App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+          secondary: const Color(0XFFEDF2F6),
+          secondaryContainer: const Color(0XFF9DB7CB),
+        ),
         useMaterial3: true,
       ),
       home: StreamBuilder(
