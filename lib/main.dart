@@ -23,6 +23,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Chat App',
       theme: ThemeData(
+        fontFamily: 'Gilroy',
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.deepPurple,
           secondary: const Color(0XFFEDF2F6),
