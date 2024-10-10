@@ -2,9 +2,14 @@ import 'package:chat_app/widgets/chat_messages.dart';
 import 'package:chat_app/widgets/new_message.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class ChatScreen extends StatelessWidget {
-  const ChatScreen({super.key});
+  final String? companionId;
+  const ChatScreen({
+    super.key,
+    required this.companionId,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +29,11 @@ class ChatScreen extends StatelessWidget {
         ],
       ),
       body: Column(
-        children: const [
+        children: [
           ChatMessages(),
-          NewMessage(),
+          NewMessage(
+            companionUserId: companionId,
+          ),
         ],
       ),
     );
